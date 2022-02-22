@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E40975E627C3F022002A0BC2 /* BetaFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = E40975E527C3F022002A0BC2 /* BetaFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E40975ED27C3F03F002A0BC2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40975EC27C3F03F002A0BC2 /* TestViewController.swift */; };
+		E40975EF27C3F052002A0BC2 /* Resten.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40975EE27C3F052002A0BC2 /* Resten.storyboard */; };
+		E40975F127C3F073002A0BC2 /* LoadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40975F027C3F073002A0BC2 /* LoadHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E40975E227C3F022002A0BC2 /* BetaFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BetaFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40975E527C3F022002A0BC2 /* BetaFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetaFramework.h; sourceTree = "<group>"; };
+		E40975EC27C3F03F002A0BC2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		E40975EE27C3F052002A0BC2 /* Resten.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Resten.storyboard; sourceTree = "<group>"; };
+		E40975F027C3F073002A0BC2 /* LoadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadHelper.swift; sourceTree = "<group>"; };
+		E409761927C3F1AD002A0BC2 /* BetaFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BetaFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			children = (
 				E40975E427C3F022002A0BC2 /* BetaFramework */,
 				E40975E327C3F022002A0BC2 /* Products */,
+				E409761827C3F1AC002A0BC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,8 +54,24 @@
 			isa = PBXGroup;
 			children = (
 				E40975E527C3F022002A0BC2 /* BetaFramework.h */,
+				E40975EE27C3F052002A0BC2 /* Resten.storyboard */,
+				E40975EC27C3F03F002A0BC2 /* TestViewController.swift */,
+				E40975F027C3F073002A0BC2 /* LoadHelper.swift */,
 			);
 			path = BetaFramework;
+			sourceTree = "<group>";
+		};
+		E409761827C3F1AC002A0BC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E409761927C3F1AD002A0BC2 /* BetaFramework.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E409761A27C3F1AD002A0BC2 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +117,7 @@
 				TargetAttributes = {
 					E40975E127C3F022002A0BC2 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -107,6 +132,12 @@
 			mainGroup = E40975D827C3F022002A0BC2;
 			productRefGroup = E40975E327C3F022002A0BC2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E409761A27C3F1AD002A0BC2 /* Products */;
+					ProjectRef = E409761927C3F1AD002A0BC2 /* BetaFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E40975E127C3F022002A0BC2 /* BetaFramework */,
@@ -119,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40975EF27C3F052002A0BC2 /* Resten.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40975ED27C3F03F002A0BC2 /* TestViewController.swift in Sources */,
+				E40975F127C3F073002A0BC2 /* LoadHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +294,7 @@
 		E40975EA27C3F022002A0BC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -280,6 +315,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,6 +324,7 @@
 		E40975EB27C3F022002A0BC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
